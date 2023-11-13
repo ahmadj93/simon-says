@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simon says game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>SIMON SAYS GAME</h1>
+      <h2 id="explanation">Welcome!</h2>
+    </div>
+     
+    <div id="boxes" class="boxes">
+      <div id="box1" class="red box box1" nb="1">red</div>
+      <div id="box2" class="blue box box2" nb="2">blue</div>
+      <div id="box3" class="green box box3" nb="3">green</div>
+      <div id="box4" class="yellow box box4" nb="4">yellow</div>
+    </div>
+    <button id="start" class="start">start  game</button>
+    <div id="heading">level info</div>
+    <div class="hidden">
+  <audio
+  src="audio/red.mp3"
+  data-sound=1></audio>
+  <audio
+  src="audio/blue.mp3"
+      data-sound=2></audio>
+  <audio
+  src="audio/green.mp3"
+      data-sound=3></audio>
+  <audio
+  src="audio/yellow.mp3"
+      data-sound=4></audio>
+     <script src="main.js"></script>
+  </body>
+</html>
