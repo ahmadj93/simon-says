@@ -12,7 +12,7 @@
     pointer-events: none;
 }
 #boxes .grey{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .title{
@@ -59,16 +59,16 @@ justify-content: center;}
 
 
 .red{
-    background-color: red;
+    background-color: rgb(187, 61, 61);
 }
 .green{
-    background-color: green;
+    background-color: rgb(71, 128, 71);
 }
 .blue{
-    background-color: blue;
+    background-color: rgb(150, 16, 155);
 }
 .yellow{
-    background-color: yellow;
+    background-color: rgb(108, 201, 185);
 }
 
 .level{
