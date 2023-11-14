@@ -17,6 +17,7 @@
 
 .title{
     text-align: center;
+    color: #fff;
 }
 
 body{
@@ -26,7 +27,8 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: darkgray;
+    background-size: 100%;
+    background-image: url("images/abstract-futuristic-black-red-gaming-background_136469-800.avif");
 }
 button{ 
     border-radius: 8px;
@@ -67,4 +69,10 @@ justify-content: center;}
 }
 .yellow{
     background-color: yellow;
+}
+
+.level{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
 }

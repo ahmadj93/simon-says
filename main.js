@@ -8,7 +8,7 @@ let box1 = document.getElementById("box1");
 let box2 = document.getElementById("box2");
 let box3 = document.getElementById("box3");
 let box4 = document.getElementById("box4");
-let heading = document.getElementById("heading");
+let heading = document.getElementById("level-info");
 let startButton = document.getElementById("start");
 let infomessage = document.getElementById("explanation");
 
@@ -18,6 +18,9 @@ boxes.addEventListener("click", (event) => {
                         const nb = event.target.getAttribute("nb");
                         const sound = document.querySelector(`[data-sound='${nb}']`);
                         sound.play();
+                        taps-=1;
+                        infomessage.textContent = `Remaining tap = ${taps}`;
+
                         if (nb) handleClick(nb);
                       });
 
@@ -31,9 +34,14 @@ function startgame() {
   nextRound();
 }
 function nextRound() {
-  tap = 0;
+  if(level==50)
+  {
+    resetGame("you WIN the game")
+    return;
+  }
   userarray = [];
   level += 1;
+  taps=level;
   boxes.classList.add("disable");
   heading.textContent = "level " + level;
   simonarray.push(getRandomInt(4));
@@ -45,13 +53,12 @@ function nextRound() {
 }
 
 function humanTurn(level) {
-  infomessage.textContent = "your turn is now!";
+  infomessage.textContent = `your turn is now! Remaining tap = ${taps}`;
   boxes.classList.remove("disable");
 }
 
 function handleClick(nb) {
   const index = userarray.push(nb) - 1;
-
   if (nb != simonarray[index]) {
     resetGame("Oops! Game over, you pressed the wrong tile");
     return;
